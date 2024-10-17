@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes dotani {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .dot {
+            background-color: rgb(46, 44, 44);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            float: left;
+            margin: 2px;
+            opacity: 0
+        }
+
+        #dot1 {
+            animation: dotani 3s infinite;
+            animation-delay: 0s;
+        }
+
+        #dot2 {
+            animation: dotani 3s infinite;
+            animation-delay: 0.25s;
+        }
+
+        #dot3 {
+            animation: dotani 3s infinite;
+            animation-delay: 0.5s;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="lotsofdots">
+        <div class="dot" id="dot1"></div>
+        <div class="dot" id="dot2"></div>
+        <div class="dot" id="dot3"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            transform: skewY(45deg);
+        }
+
+        #box2 {
+            background-color: green;
+            width: 100px;
+            height: 100px;
+        }
+
+        #box2:hover {
+            transform: scale(1.1);
+        }
+
+        #box3 {
+            background-color: orange;
+            width: 100px;
+            height: 100px;
+            transition: width 0.5s, height 0.5s, background-color 4s;
+           
+            transition-timing-function:
+        }
+
+        #box3:hover {
+            background-color: blue;
+            width: 110px;
+            height: 110px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Transformation</h1>
+    <div id="box">Inhalt</div>
+    <div id="box2">Inhalt</div>
+    <div id="box3">Inhalt</div>
+</body>
+
+</html>

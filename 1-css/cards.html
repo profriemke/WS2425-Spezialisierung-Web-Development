@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: rgb(78, 94, 242);
+        }
+        .card-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+                   }
+        .card-container .card {
+            width: 250px;
+            height: 250px;
+            padding:190px 5px 5px 10px;
+            box-sizing: border-box;
+            background-color: rgb(107, 122, 255);
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0px 0px 29px 0px rgb(48, 56, 126);
+            transition: background-color 1s, box-shadow 1s;
+        }
+        .card-container .card:hover {
+
+            background-color:rgb(131, 143, 252);
+            box-shadow: 14px 14px 35px 10px rgb(48, 56, 126);
+
+        }
+
+        .card-container .card .content{
+            color: white;
+            font-family: 'Archivo Black', sans-serif;
+            font-size:1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <div class="content">Cascading Style Sheets</div>
+        </div>
+        <div class="card">
+            <div class="content">CSS Preprocessors</div>
+        </div>
+        <div class="card">
+            <div class="content">Javascript Basics</div>
+        </div>
+                <div class="card">
+            <div class="content">Noch ein Beispiel</div>
+        </div>
+                <div class="card">
+            <div class="content">React with Next.js</div>
+        </div>
+                <div class="card">
+            <div class="content">more ...</div>
+        </div>
+    </div>
+</body>
+</html>
