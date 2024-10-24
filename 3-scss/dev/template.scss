@@ -1,0 +1,16 @@
+$sizes: 10, 20, 50, 100;
+$colors: red, green, blue, yellow; 
+
+@each $size in $sizes {
+  .div-#{$size} {
+    
+    height: #{$size}px;
+    width: #{$size}px;
+  }
+}
+
+@each $color in $colors {
+    .color-#{$color} {
+      background-color: #{$color};
+    }
+  }

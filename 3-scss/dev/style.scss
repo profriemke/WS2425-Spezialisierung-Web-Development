@@ -1,0 +1,39 @@
+$bg-color:rgb(230, 58, 58);
+$txt-color: black;
+$size: 12;
+
+@mixin border{
+    border: 5px solid black;
+    padding: 5px;
+}
+
+h1 {
+    color: $bg-color;
+    background-color: $txt-color;
+    font-size: #{$size*1.2}pt
+}
+.box{
+    background-color: $bg-color;
+    width: #{$size*3}px;
+    height: #{$size*3}px;
+}
+.footer {
+    background-color: $bg-color;
+    width: #{$size*4}px;
+    height: #{$size*3}px;
+}
+
+.unterbox {
+    background-color: aqua;
+    @include border;
+    & .box{
+        background-color: yellow;
+        @include border;
+    }
+} 
+.info{
+
+    &.danger{
+
+    }
+}
