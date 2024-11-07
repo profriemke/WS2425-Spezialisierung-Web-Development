@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="summand1">
+    +
+    <input type="text" id="summand2">
+    <button onclick="rechne()">=</button>
+    <span id="ergebnis">0</span>
+
+    <script>
+        function rechne() {
+            const summand1 = document.getElementById('summand1')
+            const summand2 = document.getElementById('summand2')
+            const ergebnis = document.getElementById('ergebnis')
+
+            const summe = parseInt(summand1.value) + parseInt(summand2.value)
+
+            ergebnis.innerText = summe
+            console.log(document.getElementsByTagName('body')[0].innerText)
+            console.log(document.getElementsByTagName('body')[0].innerHTML)
+
+        }
+    </script>
+
+</body>
+
+</html>

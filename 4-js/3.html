@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box">ich, das div</div>
+    <button onclick="wegDamit()">hinweg!</button>
+    <button onclick="hinzu()">hinzu!</button>
+
+    <script>
+        function hinzu() {
+            const box = document.getElementById('box')
+            const newElement = document.createElement('DIV')
+            newElement.innerText = 'Mama!'
+            box.appendChild(newElement)
+        }
+        function wegDamit() {
+            document.getElementById('box').remove()
+
+        }
+
+    </script>
+
+</body>
+
+</html>
