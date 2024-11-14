@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="ente.webp" id="box">
+    <script>
+        let box = document.getElementById('box')
+        box.style.width = "100px"
+        box.style.height = "100px"
+        box.style.backgroundColor = "green"
+        box.style.position = "absolute"
+        box.style.left = "100px"
+        //box.style.top = "300px"
+        let schritt = 1
+        let position = 1
+        let timer = 0
+        setInterval(()=>{
+            
+            box.style.left = position + "px"
+            position = position + schritt
+            if (position > 500) {
+                schritt = schritt * -1
+            }
+            if (position < 0) {
+                schritt = schritt * -1
+            }
+   
+    }, 10)
+        
+
+    </script>
+</body>
+
+</html>

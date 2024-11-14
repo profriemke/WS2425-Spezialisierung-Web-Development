@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .littlered {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .biggreen {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        .hide {
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="box" class="littlered"></div>
+    <button id="change">ändern</button>
+    <button onclick=" document.getElementById('box').classList.add('hide')">aus</button>
+    <button onclick=" document.getElementById('box').classList.remove('hide')">an</button>
+    <script>
+        let button = document.getElementById("change")
+        button.addEventListener('click', () => {
+
+            let box = document.getElementById('box')
+            if (box.classList.contains('littlered')) {
+                box.classList.add("biggreen")
+                box.classList.remove('littlered')
+            } else {
+                box.classList.add("littlered")
+                box.classList.remove('biggreen')
+            }
+
+        })
+        document.getElementById('box').addEventListener('mouseover', () => {
+            document.getElementById('box').innerText = "hallo"
+        })
+        document.getElementById('box').addEventListener('mouseout', () => {
+            document.getElementById('box').innerText = ""
+        })
+        window.addEventListener("keyup", (e) => {
+            console.log(e.key)
+        })
+
+    </script>
+</body>
+
+</html>
