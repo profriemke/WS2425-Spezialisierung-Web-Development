@@ -8,11 +8,18 @@
     </title>
 
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css'])
   </head>
   <body>
-    <h1 class="text-3xl text-slate-400">Meine Seite!</h1>
-    text
-    
+    <h1 class="bg-lime-600 text-3xl text-slate-400">Meine Seite!</h1>
+    <div class="flex">
+      @each(note in notes)
+      <div class="w-60 h-60 m-4 bg-yellow-300 p-4 shadow-xl">
+        {{ note.text }}
+      </div>
+      @end
+  
+    </div>
+
   </body>
 </html>
