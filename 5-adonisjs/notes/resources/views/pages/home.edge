@@ -18,8 +18,12 @@
         {{ note.text }}
       </div>
       @end
-  
     </div>
+    <form action="/newpost" method="post">
+      {{csrfField()}}
+      <input class="border rounded" type="text" name="text">
+      <input class="bg-blue-600 text-white rounded-xl p-2" type="submit" value="neu">
+    </form>
 
   </body>
 </html>
