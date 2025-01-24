@@ -9,23 +9,35 @@ export default function Home() {
   let [count, setCount] = useState(0)
   let [notes, setNotes] = useState([])
 
-  const addNote = (text)=>{
+const deleteNote = async (id)=>{
+  fetch('/api/notes',{
+    method:'DELETE',
+    headers:{
+      'Content-Type': 'application/json'
+     },
+     body:JSON.stringify({id:id})
+  })
+  setNotes(notes.filter((note) => note.id !== id))
+
+}
+
+  const addNote = async (text)=>{
    fetch('/api/notes', {
      method :'POST',
      headers:{
       'Content-Type': 'application/json'
      },
-     body: JSON.stringify(text)
+     body: JSON.stringify({text:text})
    })
    .then((response)=>response.json())
    .then ((data)=>{
-      console.log(data.id) // {id: 'BCDEFG'}
-    setNotes([...notes, {id: data.id, text: text}])
+      console.log(data) // {id: 'BCDEFG'}
+      setNotes([...notes, data])
    })
    .catch(err => console.log(err))
    }
 
-  }
+  
 
   useEffect(()=>{
     fetch('/api/notes')
@@ -48,7 +60,7 @@ export default function Home() {
       <div className="float-start">
       {
         notes.map((note)=>{
-          return(<Note key={note.id} content={note.content}/>)
+          return(<Note key={note.id} content={note.content} id={note.id} deleteNote={deleteNote}/>)
         })
       }
       </div>
